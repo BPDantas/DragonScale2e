@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+:root{
+  --bg-white : #eee7e1;
+  --pf2e-red : #530101;
+  --pf2e-green : #015e1b;
+}
+#root{
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-white);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+/* For other browsers, if needed */
+input[type="number"] {
+    appearance: textfield;
+}
+
+/*------*/
+
+.banner{
+  font-weight:bolder;
+  font-family: "Eagle Lake", serif;
+  color: var(--pf2e-red);
+  border-bottom: 1px solid var(--pf2e-red);
+  height:10vh;
+  margin: 0;
+}
+
+.card{
+  border-radius: 20px;
+  padding: 0px;
+  padding-bottom: 20px;
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 5px 5px 102px 10px lightgray;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.chapterRed{
+  font-family: serif;
+  text-align: left;
+  color: var(--pf2e-red);
+  margin:0;
+  border-bottom: 1px solid var(--pf2e-red);
+  padding: 10px;
+  background-color: #fff;
+}
+
+.chapterGreen{
+  font-family: serif;
+  text-align: left;
+  color: var(--pf2e-green);
+  margin:0;
+  border-bottom: 1px solid var(--pf2e-green);
+  padding: 10px;
+}
+
+.line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  margin: 0px;
+}
+
+.together{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+.together>input{
+  margin-left: 5px;
+}
+
+.dashed{
+  border-bottom: 1px dashed lightgray;
+}
+
+input{
+  max-width: 2em;
+  min-width: 1em;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid var(--pf2e-red);
+  border-radius: 3px;
+}
+
+.hp{
+  max-width: 3em;
+  min-width: 1em;
+  text-align: center;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mainRow{
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+  justify-content: center;
+  width:100%;
+  margin: 0px;
+}
+
+.section{
+  background-color: #eee;
+  box-shadow: 0px 10px 15px lightgray inset;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.tiny{
+  font-weight: normal;
+  font-size:xx-small;
+  margin: 0;
+  padding-right: 10px;
+  text-align: end;
+}
+
+.subtitle{
+  font-family: "Eagle Lake", serif;
+  font-size: medium;
+  font-weight: normal;
+  margin: 0px 0px 50px 0px;
+}
+
+.title{
+  font-family: "Eagle Lake", serif;
+  color: white;
+  border-radius: 12px 12px 0px 0px;
+  padding:15px;
+  margin: 0px;
+}
+
+.titleRed{
+  background-color: var(--pf2e-red);
+}
+
+.titlegreen{
+  background-color: var(--pf2e-green);
+}
+
+p{
+  font-weight: bold;
+}
+
+.newStat{
+  font-family:"Eagle Lake",serif;
+  font-weight: normal;
+  color: var(--pf2e-green);
+  border-radius: 0px;
+  border-bottom: 2px solid var(--pf2e-green);
+  padding: 0px 5px 0px 5px;
+}
+
+
+@media (max-width: 972px) {
+  .mainRow{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: flex-start;
+  align-items: center;
+  width:100%;
+  margin: 0px;
+}
+
+.card{
+  border-radius: 20px;
+  padding: 0px;
+  padding-bottom: 20px;
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 5px 5px 102px 10px lightgray;
+  width: 90%;
+  max-width: 500px;
+  min-width: 412px;
+}
+}

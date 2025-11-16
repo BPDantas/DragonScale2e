@@ -43,7 +43,7 @@ p{
   border-bottom: 1px solid var(--pf2e-red);
   height:10vh;
   margin: 0;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .card{
@@ -110,6 +110,7 @@ input{
   background-color: #fff;
   border: 2px solid var(--pf2e-red);
   border-radius: 3px;
+  color: black;
 }
 
 .hp{
@@ -205,5 +206,15 @@ input{
   width: 90%;
   max-width: 500px;
   min-width: 412px;
+}
+
+.banner{
+  font-weight:bolder;
+  font-family: "Eagle Lake", serif;
+  color: var(--pf2e-red);
+  border-bottom: 1px solid var(--pf2e-red);
+  height:10vh;
+  margin: 0;
+  font-size: 1em;
 }
 }

@@ -31,6 +31,11 @@ input[type="number"] {
 
 /*------*/
 
+p{
+  font-weight: bold;
+  color: black;
+}
+
 .banner{
   font-weight:bolder;
   font-family: "Eagle Lake", serif;
@@ -38,6 +43,7 @@ input[type="number"] {
   border-bottom: 1px solid var(--pf2e-red);
   height:10vh;
   margin: 0;
+  font-size: 3em;
 }
 
 .card{
@@ -166,10 +172,6 @@ input{
 
 .titlegreen{
   background-color: var(--pf2e-green);
-}
-
-p{
-  font-weight: bold;
 }
 
 .newStat{

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { lookupTable } from './Tables';
-import { findIndex, transformStat } from './Functions';
+import { findIndex, transformStat,ShowNumber } from './Functions';
 import './App.css'
 
 function App() {
@@ -146,7 +146,7 @@ function App() {
           <h1 className='title titleRed'>Base Stats</h1>
           <div className='line section'>
             <p>Level:</p>
-            <input type="number" value={statsB.levelB} min={-1} max={24} onChange={(e) => setStatsB((prev)=>({...prev, levelB:parseInt(e.target.value)||0}))}/>
+            <input type="number" value={statsB.levelB} min={-1} max={24} onChange={(e) => setStatsB((prev)=>({...prev, levelB:parseInt(e.target.value)}))}/>
           </div>
           <h2 className='chapterRed'>Stats</h2>
           <div className='section'>
@@ -160,13 +160,15 @@ function App() {
                 <p>Skill:</p>
                 <input type="number" value={statsB.skillB} onChange={(e) => setStatsB((prev)=>({...prev, skillB:parseInt(e.target.value)||0}))}/>
               </div>
-              <div className='line attribute'>
+              <div className='line att'>
                 <p>Str:</p>
                 <input type="number" min={-5} value={statsB.strengthB} onChange={(e) => setStatsB((prev)=>({...prev, strengthB:parseInt(e.target.value)||0}))}/>
                 <p>Dex:</p>
                 <input type="number" min={-5} value={statsB.dexterityB} onChange={(e) => setStatsB((prev)=>({...prev, dexterityB:parseInt(e.target.value)||0}))}/>
                 <p>Con:</p>
                 <input type="number" min={-5} value={statsB.constitutionB} onChange={(e) => setStatsB((prev)=>({...prev, constitutionB:parseInt(e.target.value)||0}))}/>
+              </div>
+              <div className='line att'>
                 <p>Int:</p>
                 <input type="number" min={-5} value={statsB.intelligenceB} onChange={(e) => setStatsB((prev)=>({...prev, intelligenceB:parseInt(e.target.value)||0}))}/>
                 <p>Wis:</p>
@@ -277,6 +279,8 @@ function App() {
                 <ShowNumber n={statsN.dexterityN}></ShowNumber>
                 <p>Con:</p>
                 <ShowNumber n={statsN.constitutionN}></ShowNumber>
+              </div>
+              <div className='line'>
                 <p>Int:</p>
                 <ShowNumber n={statsN.intelligenceN}></ShowNumber>
                 <p>Wis:</p>
@@ -348,13 +352,6 @@ function App() {
 }
 
 
-const ShowNumber=({n}:{n:number})=>
-{
-  if (n >= 0){
-    return <p className='newStat'>+{n}</p>;
-  }else{
-    return <p className='newStat'>{n}</p>;
-  }
-}
+
 
 export default App

@@ -11,8 +11,9 @@
   text-align: center;
   height: 100%;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: var(--bg-white);
+  box-sizing: border-box;
 }
 
 input::-webkit-outer-spin-button,
@@ -54,7 +55,7 @@ p{
   background-color: #fff;
   box-shadow: 5px 5px 102px 10px lightgray;
   max-width: 500px;
-  min-width: 300px;
+  min-width: 412px;
 }
 
 .chapterRed{
@@ -186,6 +187,15 @@ input{
 
 
 @media (max-width: 972px) {
+  .main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
   .mainRow{
   display: flex;
   flex-direction: column;
@@ -203,9 +213,9 @@ input{
   flex: 1;
   background-color: #fff;
   box-shadow: 5px 5px 102px 10px lightgray;
-  width: 90%;
+  width: 110%;
   max-width: 500px;
-  min-width: 412px;
+  min-width: unset;
 }
 
 .banner{
@@ -215,6 +225,23 @@ input{
   border-bottom: 1px solid var(--pf2e-red);
   height:10vh;
   margin: 0;
-  font-size: 1em;
+  font-size: 2rem;
+}
+
+.section{
+  background-color: #eee;
+  box-shadow: 0px 10px 15px lightgray inset;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.newStat{
+  font-family:"Eagle Lake",serif;
+  font-weight: normal;
+  color: var(--pf2e-green);
+  border-radius: 0px;
+  border-bottom: 2px solid var(--pf2e-green);
+  padding: 0px 5px 0px 5px;
+  font-size: small;
 }
 }

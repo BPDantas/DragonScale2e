@@ -23,6 +23,14 @@ export const BasicInput = (
     )
 }
 
+export const ShowNumber=({n}:{n:number})=>
+{
+  if (n >= 0){
+    return <p className='newStat'>+{n}</p>;
+  }else{
+    return <p className='newStat'>{n}</p>;
+  }
+}
 
 export function findIndex(value:number,row:number[]){
   for(let x=0;x<row.length;x++){
@@ -42,12 +50,3 @@ export  function transformStat(table:number[][],valueBase:number,levelB:number,l
 
     return valueNew;
   }
-/*
-  export  function transformStat(table:number[][],valueBase:number,levelB:number,levelN:number){
-    let levelRow = table[levelB+1];
-    let index = findIndex(valueBase,levelRow);
-    let dif = table[levelB+1][index] - valueBase;
-    let valueNew = table[levelN+1][index] - dif;
-
-    return valueNew;
-  }*/
